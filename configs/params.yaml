@@ -1,0 +1,17 @@
+paths:
+  data_raw: data/raw
+  data_interim: data/interim
+  data_processed: data/processed
+
+model:
+  roi:
+    target: roi
+  rent:
+    horizon_days: 365
+  sentiment:
+    window_days: 7
+recommendation:
+  weights:
+    roi: 0.5
+    rent_growth: 0.3
+    sentiment: 0.2
