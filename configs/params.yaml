@@ -15,3 +15,16 @@ recommendation:
     roi: 0.5
     rent_growth: 0.3
     sentiment: 0.2
+
+schema:
+  required_columns: [id, city, price, rent, bed, bath]
+  dtypes:
+    id: int64
+    city: string
+    price: float64
+    rent: float64
+    bed: int64
+    bath: float64
+  constraints:
+    id_unique: true
+    non_negative: [price, rent, bed, bath]
